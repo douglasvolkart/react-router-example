@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Routes } from './Components/Routes';
+import { App } from './Components/App';
 import './Styles/app.css'; 
 import { createBrowserHistory } from 'history';
 
@@ -8,6 +8,6 @@ import { render } from 'react-dom';
 export const history = createBrowserHistory();
 
 render(
-    <Routes />,
+    <App />,
     document.getElementById('root') as HTMLElement
 );

@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Route, Switch, BrowserRouter, Link } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { HomePage } from '../Pages/HomePage';
 import { ContatoPage } from '../Pages/ContatoPage';
-import { InputSearch } from '../Components/InputSearch';
+import { Menu } from '../Components/Menu';
+import { Header } from './Header';
 
 export class RoutePaths {
     public static home: string = '/';
@@ -10,30 +11,18 @@ export class RoutePaths {
 
 }
 
-export class Routes extends React.Component {
+export class App extends React.Component {
     handleLoadRoute() {
 
     }
     render() {
         return (
             <div id="divMaster">
-                <header className="header">
-                    <p>Meu header html</p>
-                </header>
+                <Header />
                 <div>
                     <BrowserRouter >
                         <div>
-                            <ul>
-                                <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/contato">contato</Link>
-                                </li>
-                                <li>
-                                    <InputSearch /> 
-                                </li>
-                            </ul>
+                            <Menu />
                             <Switch>
                                 <Route exact={true} path={RoutePaths.home} component={HomePage} />
                                 <Route path={RoutePaths.contato} component={ContatoPage} />
