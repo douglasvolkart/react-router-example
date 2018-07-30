@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import { HomePage } from '../Pages/HomePage';
-import { ContatoPage } from '../Pages/ContatoPage';
+import { BrowserRouter } from 'react-router-dom';
 import { Menu } from '../Components/Menu';
 import { Header } from './Header';
+import { RouterConfigs } from './RouterConfig';
 
 export class RoutePaths {
     public static home: string = '/';
@@ -23,10 +22,7 @@ export class App extends React.Component {
                     <BrowserRouter >
                         <div>
                             <Menu />
-                            <Switch>
-                                <Route exact={true} path={RoutePaths.home} component={HomePage} />
-                                <Route path={RoutePaths.contato} component={ContatoPage} />
-                            </Switch>
+                            <RouterConfigs />
                         </div>
                     </BrowserRouter >
                 </div>
