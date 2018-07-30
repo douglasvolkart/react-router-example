@@ -4,6 +4,9 @@ interface InputSearchState {
     route?: string;
 }
 class InputSearch extends React.Component<RouteComponentProps<any>, InputSearchState> {
+    componentDidMount() {
+        this.setState({ route: '' });
+    }
     handleButtonClick() {
         this.props.history.push('/render1');
     }
