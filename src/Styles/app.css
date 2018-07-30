@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #c2d2ea;
+}
+header{
+    height: 70px;
+    background: #ccc;
+    padding: 10px;
+}
+ul{
+    background: #7c91af;
+    margin: 0;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+   
+}
+ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+ul li a:hover{
+   text-decoration: underline;
+}
+.page{
+    height: 500px;
+    padding: 10px;
+}
+.page p{
+    padding: 0px;
+    margin: 0px;
+}
