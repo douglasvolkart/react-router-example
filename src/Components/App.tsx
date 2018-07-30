@@ -4,12 +4,6 @@ import { Menu } from '../Components/Menu';
 import { Header } from './Header';
 import { RouterConfigs } from './RouterConfig';
 
-export class RoutePaths {
-    public static home: string = '/';
-    public static contato: string = '/contato';
-
-}
-
 export class App extends React.Component {
     handleLoadRoute() {
 
